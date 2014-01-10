@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Creates an iOS application project with a root view controller which used a NIB for its UI.</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.cocoaTouchApplication</string>
+	</array>
+	<key>Concrete</key>
+    	<true/>
+    <key>Definitions</key>
+    <dict>
+		<key>___VARIABLE_classPrefix:identifier___RootViewController.m:private</key>
+		<string>@interface ___VARIABLE_classPrefix:identifier___RootViewController ()
+@end
+		</string>
+		<key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions</key>
+		<dict>
+			<key>Beginning</key>
+			<string>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    _window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
+    _window.rootViewController = [___VARIABLE_classPrefix:identifier___RootViewController new];
+    [_window makeKeyAndVisible];
+			</string>
+			<key>End</key>
+			<string>    return YES;
+}
+			</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>Identifier</key>
+	<string>uk.co.jaml.NIBBasedApplication</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Nodes</key>
+	<array>
+	<string>___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___RootViewController.h</string>
+		<string>___VARIABLE_classPrefix:identifier___RootViewController.h:viewControllerInterface</string>
+		<string>___VARIABLE_classPrefix:identifier___RootViewController.m:comments</string>
+		<string>___VARIABLE_classPrefix:identifier___RootViewController.m:import:___VARIABLE_classPrefix:identifier___RootViewController.h</string>
+		<string>___VARIABLE_classPrefix:identifier___RootViewController.m:private</string>
+		<string>___VARIABLE_classPrefix:identifier___RootViewController.m:implementation:viewDidLoad</string>
+		<string>___VARIABLE_classPrefix:identifier___RootViewController.m:implementation:didReceiveMemoryWarning</string>
+
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>universalDeviceFamily</string>
+			<key>Units</key>
+			<dict>
+				<key>Universal</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Base.lproj/___VARIABLE_classPrefix:identifier___RootViewController~ipad.xib</key>
+						<dict>
+							<key>Path</key>
+							<string>RootViewController~ipad.xib</string>
+						</dict>
+						<key>Base.lproj/___VARIABLE_classPrefix:identifier___RootViewController~iphone.xib</key>
+						<dict>
+							<key>Path</key>
+							<string>RootViewController~iphone.xib</string>
+						</dict>
+					</dict>
+					<key>Nodes</key>
+					<array>
+						<string>Base.lproj/___VARIABLE_classPrefix:identifier___RootViewController~iphone.xib</string>
+						<string>Base.lproj/___VARIABLE_classPrefix:identifier___RootViewController~ipad.xib</string>
+					</array>
+				</dict>
+				<key>iPad</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Base.lproj/___VARIABLE_classPrefix:identifier___RootViewController.xib</key>
+						<dict>
+							<key>Path</key>
+							<string>RootViewController~ipad.xib</string>
+						</dict>
+					</dict>
+					<key>Nodes</key>
+					<array>
+						<string>Base.lproj/___VARIABLE_classPrefix:identifier___RootViewController.xib</string>
+					</array>
+				</dict>
+				<key>iPhone</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Base.lproj/___VARIABLE_classPrefix:identifier___RootViewController.xib</key>
+						<dict>
+							<key>Path</key>
+							<string>RootViewController~iphone.xib</string>
+						</dict>
+					</dict>
+					<key>Nodes</key>
+					<array>
+						<string>Base.lproj/___VARIABLE_classPrefix:identifier___RootViewController.xib</string>
+					</array>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
